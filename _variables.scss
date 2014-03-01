@@ -1,0 +1,32 @@
+ //
+ // ---------------------------------------------------------------------------------------------------- #
+ //
+ // Variables
+ //
+ //
+
+// colors
+$basecolor: #07232a;
+$highlightcolor: #fff;
+$highlightwithbase: #2d96dc;
+
+$grey: #eeecec;
+$fontcolor: #6e7375;
+$fontcolordark: #505050;
+$fontcolorlight: #a3aaad;
+
+// fonts
+$default_font_size: 16;
+$fontmain: "Titillium Web", Arial, sans-serif;
+
+// grid
+$maingridwidth: 860px;
+
+// breakpoints
+$respond-to-no-mediaqueries-fallback: desktop;
+$respond-to-fallback-class: ie8lte;
+$respond-to-breakpoints: (
+    desktop "(min-width: 861px)",
+    tablet "(min-width: 569px) and (max-width: 860px)",
+    mobile "(max-width: 568px)"
+);

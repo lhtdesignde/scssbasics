@@ -1,0 +1,391 @@
+@charset "UTF-8";
+/*
+ *  CSS Basic Styles
+ *
+ *  CSS Compiled on: 2014-03-01 20:21:48 +0100
+ */
+@font-face {
+  font-family: "";
+  src: local("local font name");
+  src: url("fonts/.eot");
+  src: url("fonts/.eot?#iefix") format("embedded-opentype"), url("fonts/.woff") format("woff"), url("fonts/.ttf") format("truetype"), url("fonts/.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * Base - reset, bugfixes, skiplinks, clearfix
+ *
+ * include in style
+ */
+/**
+ *
+ * Globaler Browser Reset
+ * by Eric Meyer
+ *
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/**
+ *
+ * Bugfixes für html aus normalize Ansatz
+ *
+ * @section fixes
+ */
+/* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Force scrollbars to avoid visual jumping
+ */
+body {
+  overflow-y: scroll;
+}
+
+/* fix to remove extra inner padding on buttons in firefox */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* control over ie10/11 input features */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/**
+ *
+ * Standards & Helpers
+ *
+ * generic-content-classes
+ */
+.clearfix {
+  /* fix für safari */
+  display: block;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  content: ".";
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* IE7 */
+.block {
+  overflow: hidden;
+}
+
+.border_box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ellipsis {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+}
+
+.hyphens {
+  -ms-word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}
+.visuallyhidden .focusable:active,
+.visuallyhidden .focusable:focus {
+  overflow: visible;
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+}
+
+/*
+ * Hidden Elements
+ */
+.skip,
+.hideme,
+.print {
+  position: absolute;
+  top: -32768px;
+  left: -32768px;
+}
+
+/* skiplinks setup */
+#skiplinks {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 1000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#skiplinks .skip:focus,
+#skiplinks .skip:active {
+  position: absolute;
+  top: 0;
+  left: 9999px;
+  width: 100%;
+  outline: 0 none;
+  padding: 7px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #333;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* print setup */
+@media print {
+  body {
+    overflow: visible;
+    font-size: 10pt;
+    background: transparent none;
+  }
+
+  #topnav,
+  #nav,
+  #search,
+  nav,
+  .noprint {
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  .print {
+    position: static;
+    left: 0;
+  }
+}
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ *  Global Stylesheet - general, frame, grid
+ *
+ */
+body {
+  font-family: "Titillium Web", Arial, sans-serif;
+  font-size: 1em;
+  /* 16px */
+  line-height: 1.25em;
+  /* 20px */
+  text-align: left;
+  color: #6e7375;
+  background-color: #eeecec;
+  -webkit-tap-highlight-color: #2d96dc;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * General text renderings
+ *
+ * @section general-text-formattings
+ */
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+address {
+  font-style: normal;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * Hyperlinks
+ *
+ * @section links
+ */
+a,
+a:visited {
+  text-decoration: none;
+  color: #2d96dc;
+}
+
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * General Layout
+ *
+ * @section layout-basics
+ */
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ *  Header
+ *
+ * @section header
+ */
+.header {
+  background-color: #07232a;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * Main content
+ *
+ * @section main
+ */
+#main {
+  min-height: 400px;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ * Footer
+ *
+ * @section footer
+ */
