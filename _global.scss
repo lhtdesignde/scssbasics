@@ -5,7 +5,6 @@
  *
  */
 
-
 body {
     font-family: $fontmain;
     @include font-height-em ( 16, 20, $default_font_size );
@@ -93,7 +92,7 @@ a:focus {
  * @section main
  */
 
-#main {
+.main {
     min-height: 400px;
 }
 

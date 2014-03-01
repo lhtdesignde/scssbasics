@@ -9,7 +9,7 @@
 
 /**
  *
- * Globaler Browser Reset
+ * Global Browser Reset
  * by Eric Meyer
  *
  */
@@ -66,7 +66,7 @@ table {
 
 /**
  *
- * Bugfixes für html aus normalize Ansatz
+ * Additional Browser Bugfixes
  *
  * @section fixes
  */
@@ -78,10 +78,7 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-/**
- * Force scrollbars to avoid visual jumping
- */
-
+/* Force scrollbars to avoid visual jumping */
 body { overflow-y: scroll; }
 
 /* fix to remove extra inner padding on buttons in firefox */
