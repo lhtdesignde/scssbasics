@@ -5,13 +5,17 @@
  *
  */
 
+html {
+    font-size: $base_font_size +px;
+}
+
 body {
     font-family: $fontmain;
-    @include font-height-em ( 16, 20, $default_font_size );
+    @include font-height( 16 , 22);
     text-align: left;
     color: $fontcolor;
     background-color: $grey;
-    -webkit-tap-highlight-color: $highlightwithbase;
+    -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -43,7 +47,7 @@ address {
 a,
 a:visited {
     text-decoration: none;
-    color: $highlightwithbase;
+    color: $grey;
 }
 
 a:hover,
@@ -61,6 +65,7 @@ a:focus {
 
 
 .page {
+
 }
 
 
@@ -71,7 +76,7 @@ a:focus {
  */
 
 .header {
-    background-color: $basecolor;
+    background-color: $grey;
 
 }
 
@@ -94,5 +99,5 @@ a:focus {
  */
 
 .footer {
-
+    background-color: $grey;
 }

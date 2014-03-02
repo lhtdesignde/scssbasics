@@ -71,7 +71,7 @@
 
     font-size: $font_size + px;
     font-size: $font_size_in_rem + rem; /* #{$font_size + px} */
-    line-height: $line_height_unitless; /* #{$line_height} + px */
+    line-height: $line_height_unitless; /* #{$line_height + px} */
 }
 
 // mediaqueries inc fallback

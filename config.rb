@@ -1,5 +1,6 @@
-# put timestamp into css file, request with #{timestamp()}
+
 module Sass::Script::Functions
+    # put timestamp into css file, request with #{timestamp()}
     def timestamp()
         return Sass::Script::String.new(Time.now.to_s)
     end
