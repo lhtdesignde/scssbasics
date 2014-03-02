@@ -1,14 +1,12 @@
 /**
  * ---------------------------------------------------------------------------------------------------- #
  *
- * Base - reset, bugfixes, skiplinks, clearfix
+ *  Base - reset, bugfixes, skiplinks, clearfix
  *
- * include in style
  */
 
 
 /**
- *
  * Global Browser Reset
  * by Eric Meyer
  *
@@ -78,10 +76,10 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-/* Force scrollbars to avoid visual jumping */
+/* force scrollbars to avoid visual jumping */
 body { overflow-y: scroll; }
 
-/* fix to remove extra inner padding on buttons in firefox */
+/* remove extra inner padding on buttons in firefox */
 input::-moz-focus-inner,
 button::-moz-focus-inner {
      border: 0;
@@ -207,11 +205,10 @@ input::-ms-clear {
         background: transparent none;
     }
 
-    #topnav,
-    #nav,
-    #search,
-    nav,
-    .noprint{ display: none; }
+    .topnav,
+    .nav,
+    .search,
+    .noprint { display: none; }
 
     h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
 
