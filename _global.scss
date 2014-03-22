@@ -6,12 +6,12 @@
  */
 
 html {
-    font-size: $base_font_size +px;
+    font-size: $default_font_size +px;
 }
 
 body {
     font-family: $fontmain;
-    @include font-height( 16 , 22);
+    @include font-height-em(16, 22);
     text-align: left;
     color: $fontcolor;
     background-color: $grey;

@@ -53,8 +53,8 @@
 }
 
 
-// font size - line height in em mixin
-@mixin font-height-em ( $font_size, $line_height, $base_font_size ) {
+// font size - line height in em mixin, needs $default_font_size
+@mixin font-height-em ( $font_size, $line_height, $base_font_size: $default_font_size ) {
 
     $font_size_em: round(($font-size / $base_font_size)*10000)/10000;
     $line_height_em: round(($line_height / $font_size)*10000)/10000;
@@ -66,7 +66,7 @@
 // font size - line height in rem mixin
 @mixin font-height ( $font_size, $line_height ) {
 
-    $font_size_in_rem: round(($font-size / $base_font_size)*10000)/10000;
+    $font_size_in_rem: round(($font-size / $default_font_size)*10000)/10000;
     $line_height_unitless: round(($line_height / $font_size)*10000)/10000;
 
     font-size: $font_size + px;
