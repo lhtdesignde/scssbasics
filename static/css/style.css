@@ -4,7 +4,7 @@
  *
  *  CSS Basic Styles
  *
- *  CSS Compiled on: 2014-04-04 17:16:05 +0200
+ *  CSS Compiled on: 2014-04-04 22:44:46 +0200
  */
 @font-face {
   font-family: "";
@@ -175,12 +175,6 @@ input::-ms-clear {
 /* IE7 */
 .block {
   overflow: hidden;
-}
-
-.border_box {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .ellipsis {

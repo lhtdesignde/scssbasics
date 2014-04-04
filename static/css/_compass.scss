@@ -5,6 +5,13 @@
  //
  //
 
+// compass 1.0 feature
+$browser-minimum-versions: (
+  "ie": "8",
+  "safari": "5"
+);
+
+
 // specific imports
 @import "compass/support";
 @import "compass/css3/box-sizing";

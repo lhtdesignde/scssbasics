@@ -1,20 +1,21 @@
 Scss Project Basics
-==========
+===================
 
 This repository sets the ground for upcoming projects in web development.
 
 It includes the following
 
+- index html with basic structure
 - reset + browser bugfixes
 - clearfix
 - helpers
 - skiplinks
 - classes for accessiblity purposes
-- some handy mixins
-- general compass libary settings inc. compiler file
+- some handy mixins (font-size in rem or em, response-to mediaqueries)
+- general compass libary settings including compiler file
 - some variables, necessary for the mixins
 - webfonts basic setup
-- a start for the page layout
+- basic start for a page layout
 - final style.css file includes timestamp
 
 
