@@ -1,0 +1,103 @@
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ *  Global Stylesheet - general, frame, grid
+ *
+ */
+
+html {
+    font-size: $default_font_size +px;
+}
+
+body {
+    font-family: $fontmain;
+    @include font-height-em(16, 22);
+    text-align: left;
+    color: $fontcolor;
+    background-color: $grey;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/**
+ * General text renderings
+ *
+ */
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+address {
+    font-style: normal;
+}
+
+
+/**
+ *
+ * Hyperlinks
+ *
+ */
+
+a,
+a:visited {
+    text-decoration: none;
+    color: $grey;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+}
+
+
+/**
+ *
+ * General Layout
+ *
+ */
+
+
+.page {
+
+}
+
+
+/**
+ *
+ *  Header
+ *
+ */
+
+.header {
+    background-color: $grey;
+
+}
+
+/**
+ *
+ * Main content
+ *
+ */
+
+.main {
+    min-height: 400px;
+}
+
+
+
+/**
+ *
+ * Footer
+ *
+ */
+
+.footer {
+    background-color: $grey;
+}

@@ -1,0 +1,32 @@
+ //
+ // ---------------------------------------------------------------------------------------------------- #
+ //
+ // Variables
+ //
+ //
+
+// colors
+$grey: #eeecec;
+$fontcolor: #6e7375;
+
+// fonts
+$default_font_size: 16;
+
+$fontmain: Arial, sans-serif;
+
+// grid
+$maingridwidth: 860px;
+
+// breakpoints
+$breakpoint_max_mobile: 568px;
+$breakpoint_min_tablet: 569px;
+$breakpoint_max_tablet: $maingridwidth;
+$breakpoint_min_desktop: 861px;
+
+$respond-to-no-mediaqueries-fallback: desktop;
+$respond-to-fallback-class: ie8lte;
+$respond-to-breakpoints: (
+    desktop "(min-width:"+$breakpoint_min_desktop+")",
+    tablet "(min-width:"+$breakpoint_min_tablet+") and (max-width:"+$breakpoint_max_tablet+")",
+    mobile "(max-width:"+$breakpoint_max_mobile+")"
+);
