@@ -4,6 +4,7 @@ Scss Project Basics
 This repository sets the ground for upcoming projects in web development.
 
 
+
 Minimum requirements:
 
 - Ruby 1.9.3 (https://www.ruby-lang.org)
@@ -11,14 +12,15 @@ Minimum requirements:
 - Sass 3.3 (http://sass-lang.com)
 
 
-It includes the following
+
+It includes the following:
 
 - index html with basic structure
-- reset + browser bugfixes
+- reset + complemental normalize browser bugfixes
 - clearfix
-- helpers
-- skiplinks
-- classes for accessiblity purposes
+- helpers for OOCSS
+- accessible skiplinks
+- helper classes for accessiblity purposes
 - some handy mixins (font-size in rem or em, response-to mediaqueries)
 - general compass libary settings including compiler file
 - some variables, necessary for the mixins
