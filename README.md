@@ -3,6 +3,14 @@ Scss Project Basics
 
 This repository sets the ground for upcoming projects in web development.
 
+
+Minimum requirements:
+
+- Ruby 1.9.3 (https://www.ruby-lang.org)
+- Compass 1.0 (http://beta.compass-style.org/)
+- Sass 3.3 (http://sass-lang.com)
+
+
 It includes the following
 
 - index html with basic structure
