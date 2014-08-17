@@ -5,10 +5,24 @@
  //
  //
 
-// compass 1.0 feature
+// Set the minumum supported browsers, see below
+// http://compass-style.org/help/documentation/tuning-vendor-prefixes/
+// Discovering Browsers and Versions:
+// $ compass interactive
+// >> browsers()
+// >> browser-versions(ie)
 $browser-minimum-versions: (
   "ie": "8",
-  "safari": "5"
+  "safari": "5.1",
+  "opera": "20",
+  "firefox": "28",
+  "chrome": "34",
+
+  "ios-safari": "6.0-6.1",
+  "android": "2.3",
+  "android-chrome": "36",
+  "opera-mobile": "22",
+  "blackberry": "7"
 );
 
 

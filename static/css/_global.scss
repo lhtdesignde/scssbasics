@@ -78,6 +78,9 @@ a:focus {
 .header {
     background-color: $grey;
 
+    @include respond-to(desktop,mobile) {
+        background-color: #333;
+    }
 }
 
 /**

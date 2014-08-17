@@ -1,19 +1,22 @@
-@charset "UTF-8";
 /**
  * ---------------------------------------------------------------------------------------------------- #
  *
  *  CSS Basic Styles
  *
- *  CSS Compiled on: 2014-04-04 22:44:46 +0200
+ *  CSS Compiled on: 2014-08-17 15:34:20 -0700
  */
+/* fontface example, use src local for eventual savings of requests
 @font-face {
-  font-family: "";
-  src: local("local font name");
-  src: url("fonts/.eot");
-  src: url("fonts/.eot?#iefix") format("embedded-opentype"), url("fonts/.woff") format("woff"), url("fonts/.ttf") format("truetype"), url("fonts/.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
+	font-family: "";
+	src: local("local font name");
+	src: url('fonts/.eot');
+	src: url('fonts/.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/.woff') format('woff'),
+		 url('fonts/.ttf') format('truetype'),
+		 url('fonts/.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}*/
 /**
  * ---------------------------------------------------------------------------------------------------- #
  *
@@ -47,7 +50,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
 
@@ -151,7 +154,7 @@ input::-ms-clear {
  * generic-content-classes
  */
 .clearfix {
-  /* fix für safari */
+  /* fix for safari */
   display: block;
 }
 .clearfix:after {
@@ -160,7 +163,7 @@ input::-ms-clear {
   clear: both;
   height: 0;
   font-size: 0;
-  content: ".";
+  content: "";
 }
 
 * html .clearfix {
@@ -354,6 +357,19 @@ a:focus {
  */
 .header {
   background-color: #eeecec;
+}
+@media (min-width: 861px) {
+  .header {
+    background-color: #333;
+  }
+}
+.ie8lte .header {
+  background-color: #333;
+}
+@media (max-width: 568px) {
+  .header {
+    background-color: #333;
+  }
 }
 
 /**

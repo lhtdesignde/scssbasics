@@ -8,7 +8,7 @@
 
 // Mixins for Standards
 @mixin clearfix {
-    /* fix für safari */
+    /* fix for safari */
     display: block;
 
     &:after {
@@ -17,7 +17,7 @@
         clear: both;
         height: 0;
         font-size: 0;
-        content: ".";
+        content: "";
     }
 }
 
@@ -73,7 +73,7 @@
     line-height: $line_height_unitless; /* #{$line_height + px} */
 }
 
-// mediaqueries inc fallback
+// mediaqueries including optional fallback
 @mixin respond-to($medias...) {
     $breakpoints_length: length($respond-to-breakpoints);
 
@@ -92,12 +92,17 @@
                 }
             }
         }
-
-        @if $media == $respond-to-no-mediaqueries-fallback {
-            .#{$respond-to-fallback-class} & {
-                @content;
+        // if these variables are not defined, skip generating fallback and warn
+        @if global-variable-exists(respond-to-no-mediaqueries-fallback) and global-variable-exists(respond-to-fallback-class) {
+            @if $media == $respond-to-no-mediaqueries-fallback {
+                .#{$respond-to-fallback-class} & {
+                    @content;
+                }
             }
+        } @else {
+            @warn "Variable respond-to-no-mediaqueries-fallback and/or respond-to-fallback-class is not defined. No fallback will be generated.";
         }
+
 
         @if $had_a_hit == false {
             @warn "Media #{media} not found!";

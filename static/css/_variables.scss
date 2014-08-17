@@ -23,8 +23,10 @@ $breakpoint_min_tablet: 569px;
 $breakpoint_max_tablet: $maingridwidth;
 $breakpoint_min_desktop: 861px;
 
+// fallback settings: if not set respond-to won't render a fallback
 $respond-to-no-mediaqueries-fallback: desktop;
 $respond-to-fallback-class: ie8lte;
+
 $respond-to-breakpoints: (
     desktop "(min-width:"+$breakpoint_min_desktop+")",
     tablet "(min-width:"+$breakpoint_min_tablet+") and (max-width:"+$breakpoint_max_tablet+")",
