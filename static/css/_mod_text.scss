@@ -1,0 +1,19 @@
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ *  Module Text, simple text styles
+ *
+ */
+
+.mod-text {
+    position: relative;
+
+    .title {
+        margin-bottom: 15px;
+        @include font-height-em(20, 24);
+    }
+
+    .description {
+        margin-bottom: 10px;
+    }
+}

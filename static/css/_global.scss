@@ -6,17 +6,16 @@
  */
 
 html {
-    font-size: $default_font_size +px;
+    font-size: $default-font-size +px;
 }
 
 body {
     font-family: $fontmain;
     @include font-height-em(16, 22);
     text-align: left;
-    color: $fontcolor;
+    color: $textcolor;
     background-color: $grey;
     -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -53,7 +52,8 @@ a:visited {
 a:hover,
 a:active,
 a:focus {
-    outline: none;
+    outline: 0 none;
+    text-decoration: underline;
 }
 
 
@@ -65,7 +65,10 @@ a:focus {
 
 
 .page {
-
+    max-width: $main-grid-width;
+    min-width: $breakpoint-min-mobile;
+    margin: 0 auto;
+    background-color: $white;
 }
 
 
@@ -79,7 +82,7 @@ a:focus {
     background-color: $grey;
 
     @include respond-to(desktop,mobile) {
-        background-color: #333;
+        background-color: $darkgrey;
     }
 }
 
@@ -91,6 +94,7 @@ a:focus {
 
 .main {
     min-height: 400px;
+    padding: 20px;
 }
 
 

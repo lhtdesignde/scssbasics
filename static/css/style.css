@@ -1,22 +1,10 @@
-/**
+/*!
  * ---------------------------------------------------------------------------------------------------- #
  *
  *  CSS Basic Styles
  *
- *  CSS Compiled on: 2014-08-17 15:34:20 -0700
+ *  CSS Compiled on: Sat Mar 14 18:39:36 2015
  */
-/* fontface example, use src local for eventual savings of requests
-@font-face {
-	font-family: "";
-	src: local("local font name");
-	src: url('fonts/.eot');
-	src: url('fonts/.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/.woff') format('woff'),
-		 url('fonts/.ttf') format('truetype'),
-		 url('fonts/.svg') format('svg');
-	font-weight: 400;
-	font-style: normal;
-}*/
 /**
  * ---------------------------------------------------------------------------------------------------- #
  *
@@ -166,31 +154,14 @@ input::-ms-clear {
   content: "";
 }
 
-* html .clearfix {
-  zoom: 1;
-}
-
-/* IE6 */
-*:first-child + html .clearfix {
-  zoom: 1;
-}
-
-/* IE7 */
-.block {
-  overflow: hidden;
-}
-
 .ellipsis {
   overflow: hidden;
-  width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
 }
 
 .hyphens {
-  -ms-word-break: break-all;
-  word-break: break-word;
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -202,10 +173,6 @@ input::-ms-clear {
 
 .hide {
   display: none;
-}
-
-.invisible {
-  visibility: hidden;
 }
 
 .visuallyhidden {
@@ -232,7 +199,6 @@ input::-ms-clear {
  * Hidden Elements
  */
 .skip,
-.hideme,
 .print {
   position: absolute;
   top: -32768px;
@@ -309,7 +275,6 @@ body {
   color: #6e7375;
   background-color: #eeecec;
   -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
 }
 
 /**
@@ -342,7 +307,8 @@ a:visited {
 a:hover,
 a:active,
 a:focus {
-  outline: none;
+  outline: 0 none;
+  text-decoration: underline;
 }
 
 /**
@@ -350,6 +316,13 @@ a:focus {
  * General Layout
  *
  */
+.page {
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
 /**
  *
  *  Header
@@ -358,7 +331,7 @@ a:focus {
 .header {
   background-color: #eeecec;
 }
-@media (min-width: 861px) {
+@media (min-width: 961px) {
   .header {
     background-color: #333;
   }
@@ -379,6 +352,7 @@ a:focus {
  */
 .main {
   min-height: 400px;
+  padding: 20px;
 }
 
 /**
@@ -388,4 +362,24 @@ a:focus {
  */
 .footer {
   background-color: #eeecec;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------- #
+ *
+ *  Module Text, simple text styles
+ *
+ */
+.mod-text {
+  position: relative;
+}
+.mod-text .title {
+  margin-bottom: 15px;
+  font-size: 1.25em;
+  /* 20px */
+  line-height: 1.2em;
+  /* 24px */
+}
+.mod-text .description {
+  margin-bottom: 10px;
 }

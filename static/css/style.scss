@@ -1,4 +1,4 @@
- /**
+ /*!
   * ---------------------------------------------------------------------------------------------------- #
   *
   *  CSS Basic Styles
@@ -17,3 +17,6 @@
 @import "base";
 
 @import "global";
+
+// requires sass globbing plugin, see config.rb
+@import "_mod_*";

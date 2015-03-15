@@ -141,17 +141,12 @@ input::-ms-clear {
  */
 
 .clearfix { @include clearfix; }
-* html .clearfix { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-.block { @include block; }
 
 .ellipsis { @include ellipsis; }
 .hyphens { @include hyphens; }
 
 .show { @include show; }
 .hide { @include hide; }
-.invisible { @include invisible; }
 
 .visuallyhidden { @include visuallyhidden; }
 
@@ -161,7 +156,6 @@ input::-ms-clear {
  */
 
 .skip,
-.hideme,
 .print {
     position: absolute;
     top: -32768px;
